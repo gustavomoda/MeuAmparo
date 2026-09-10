@@ -1,3 +1,29 @@
+SOCIEDADE DE ENSINO SUPERIOR ESTÁCIO DE RIBEIRÃO PRETO
+
+Campus Ribeirão Preto
+
+Bacharelado em Ciência da Computação
+
+Programação de Microcontroladores (ARA4710)
+
+# MEU AMPARO
+
+Dispositivo vestível de detecção de queda e localização para pessoas idosas
+
+Diagnóstico e teorização
+
+Luis Gustavo Moda – Matrícula 202402520751
+
+Isabelly Vitoria – Matrícula 202608616779
+
+Orientador: Prof. Omar Sacilotto Donaires
+
+2026
+
+Ribeirão Preto / SP
+
+---
+
 # 1. Diagnóstico e teorização
 
 ## 1.1 Identificação das partes interessadas e parceiros

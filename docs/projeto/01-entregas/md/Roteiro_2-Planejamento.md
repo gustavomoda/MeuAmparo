@@ -38,6 +38,14 @@ Tabela 2 – Atividades previstas e formas de acompanhamento
 
 Fonte: planejamento dos autores (2026). A atribuição individual das frentes está na seção 2.3.
 
+A Figura 1 mostra as mesmas atividades distribuídas no tempo, com as entregas e os seminários da disciplina marcados em vermelho.
+
+Figura 1 – Cronograma do projeto
+
+![Cronograma do projeto MeuAmparo, de setembro a novembro de 2026](../figuras/gantt_cronograma.svg)
+
+Fonte: planejamento dos autores (2026).
+
 Os prazos após a validação ficam condicionados ao aceite da instituição e ao recebimento dos componentes. Se essas etapas atrasarem, o escopo e a agenda precisarão ser acordados com o orientador.
 
 ## 2.2 Forma de envolvimento do público participante
@@ -112,7 +120,7 @@ Tabela 5 – Alternativas de orçamento para uma unidade
 | Waveshare ESP32-S3-SIM7670G-4G no mercado nacional | R$ 597 a R$ 622 | Grupo |
 | Plano de dados e hospedagem | Valores ainda não definidos | Sem financiamento acordado |
 
-Fonte: MeuAmparo_Cotacao-e-Compras.md, MeuAmparo_Cotacao-e-Compras.docx e 00-LEIA-ME.docx, registros de setembro de 2026. Valores estimados, não preços atuais.
+Fonte: Cotacao-e-Compras.md e Cotacao-e-Compras.docx, registros de setembro de 2026. Valores estimados, não preços atuais.
 
 A visão de menor custo inicial favorece a LilyGO na estimativa: R$ 178 a R$ 203 abaixo da Waveshare. Depende, porém, do prazo e do custo da importação, além da revisão do case existente.
 
