@@ -3,3 +3,6 @@
 
 # arquivos de lock temporário do Word
 ~$*
+
+# exemplos de aula, fora do escopo do projeto
+src/samples/
