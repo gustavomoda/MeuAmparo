@@ -35,7 +35,7 @@ atividade; são critérios diferentes e não devem ser somados nem confundidos.
 
 ## Divergências abertas
 
-A placa está em duas versões na documentação. O 00-LEIA-ME.docx e o Word de compras registram
+A placa está em duas versões na documentação. O README de `docs/projeto/` e o Word de compras registram
 Waveshare ESP32-S3-SIM7670G-4G comprada no mercado nacional, com estimativa de R$ 597 a R$ 622. O
 canvas, os roteiros e o Markdown de compras ainda dizem LilyGO T-A7670G R2 importada, estimativa de
 R$ 419 e teto de R$ 500. Preserve a distinção e confirme comigo antes de consolidar placa ou

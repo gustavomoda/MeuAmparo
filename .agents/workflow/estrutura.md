@@ -6,42 +6,44 @@ entra em `docs/`.
 
 ```
 .agents/workflow/   estas instruções. AGENTS.md e CLAUDE.md são só ponteiros para o index.md
-docs/               material da disciplina, entregas, identidade visual, figuras
+docs/               material da disciplina e documentos do projeto
 src/meuamparo/      código: core, firmware, simulador e testes
 ```
 
 ## docs/
 
 ```
-docs/material estácio/   PDFs e modelos da disciplina. Material recebido, não editar
-docs/projeto/            entregas do grupo e fontes de trabalho
-docs/Logomarca/          identidade visual em PNG e SVG
-docs/Marketing/          vazia hoje
+docs/material-disciplina/   PDFs e modelos da disciplina. Material recebido, não editar
+docs/projeto/               tudo que o grupo produz
 ```
 
-`material estácio/` tem as aulas 01 a 05, o roteiro de extensão, a carta de apresentação, o Canvas
-oficial em docx e pdf, e o edital do III EPEI. É a fonte para modelo, formatação e calendário.
-Consulte antes de redigir qualquer entrega, e não presuma a regra de formatação.
+`material-disciplina/` tem as aulas 01 a 05, o roteiro de extensão, a carta de apresentação, o
+Canvas oficial em docx e pdf, e o edital do III EPEI. É a fonte para modelo, formatação e
+calendário. Consulte antes de redigir qualquer entrega, e não presuma a regra de formatação.
 
-`projeto/` mantém a organização numerada que veio do 00-LEIA-ME.docx:
+`projeto/` tem um `README.md` que serve de índice e mantém a organização numerada:
 
 ```
-00-LEIA-ME.docx        índice das entregas
-01-entregas/           roteiros 1 e 2, Canvas de apresentação, Canvas-Projeto
-02-parte-interessada/  levantamento de instituições de Ribeirão Preto
-03-hardware/           case (scad, dois stl, render), cotação, posicionamento
-04-figuras/            imagens usadas nos documentos e nos slides
-05-fontes-markdown/    versão Markdown dos documentos que também existem em Word
+01-entregas/            o que vai para a SAVA
+  docx/                 versão editável de cada entrega
+  md/                   fonte do texto
+  pdf/                  o arquivo que se posta
+  figuras/              imagens usadas nas entregas, como o Gantt do cronograma
+02-parte-interessada/   levantamento de instituições de Ribeirão Preto
+03-hardware/            cotação, case e posicionamento
+  case/                 scad e os dois stl
+  renders/              imagens conceituais do case e das fixações
+04-identidade-visual/   logos/ e icones/, em PNG de 512 a 6000 px e em SVG
 ```
 
-O par Word/Markdown de `05-fontes-markdown/` não sincroniza sozinho. Editou um, confira o outro
-antes de dizer que está pronto.
+Nas pastas 02 e 03 o `.docx` e o `.md` do mesmo documento ficam lado a lado; em `01-entregas` eles
+estão separados por formato. Nenhum par sincroniza sozinho: editou um, confira o outro antes de
+dizer que está pronto.
+
+Prefira o SVG da identidade visual quando o destino aceitar.
 
 Arquivos que começam com `~$` são lock temporário do Word. Ignore, não versione, não trate como
 conteúdo.
-
-`Logomarca/` tem `Logos/` (marca com nome) e `icones/` (só o símbolo), cada um em 512, 1024, 2048,
-uma versão de 6000px e o vetorial em SVG. Prefira o SVG quando o destino aceitar.
 
 ## src/meuamparo/
 

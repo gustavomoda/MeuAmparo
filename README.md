@@ -1,4 +1,4 @@
-<img src="docs/Logomarca/Logos/MeuAmparo_01_Marca_vetorial.svg" alt="MeuAmparo" width="320">
+<img src="docs/projeto/04-identidade-visual/logos/marca_vetorial.svg" alt="MeuAmparo" width="320">
 
 # MeuAmparo
 

@@ -2,7 +2,7 @@
 
 Vale para tudo que vai para a disciplina: roteiro, canvas, relatório, apresentação.
 
-Antes de redigir, abra o modelo oficial em `docs/material estácio/`, as orientações da aula
+Antes de redigir, abra o modelo oficial em `docs/material-disciplina/`, as orientações da aula
 correspondente e os arquivos já escritos. Preserve a estrutura exigida e confira o calendário. Não
 presuma regra de formatação nem declare conformidade sem ter verificado.
 
