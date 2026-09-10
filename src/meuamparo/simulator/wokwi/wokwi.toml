@@ -1,0 +1,6 @@
+# Aponta o Wokwi para o binário que o ESP-IDF gera em firmware/build/. O diagrama
+# fica aqui, e não em firmware/, porque cenário de simulação não vai para a placa.
+[wokwi]
+version = 1
+firmware = "../../firmware/build/meuamparo.bin"
+elf = "../../firmware/build/meuamparo.elf"
