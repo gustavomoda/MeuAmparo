@@ -127,8 +127,7 @@ Cada passo tem um critério de verificação. Passo sem critério verificável n
 
 ## Pendências
 
-- A placa está divergente na documentação: o índice e o Word de compras registram Waveshare
-  ESP32-S3-SIM7670G; o canvas e o Markdown de compras ainda dizem LilyGO T-A7670G R2. Não
-  consolidar sem decisão do grupo.
+- A placa é a Waveshare ESP32-S3-SIM7670G. O Wokwi não tem peça para o modem 4G nem para o GNSS,
+  então essas partes precisam ser representadas de outro jeito na simulação.
 - Dataset de queda: SisFall e FallAllD são os candidatos. Conferir licença e formato antes de usar.
 - Licença do Wokwi para a extensão do VS Code. A versão web resolve a apresentação.

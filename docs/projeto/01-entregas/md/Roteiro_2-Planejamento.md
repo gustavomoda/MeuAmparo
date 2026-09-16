@@ -4,7 +4,7 @@
 
 O planejamento organiza o desenvolvimento do MeuAmparo até novembro de 2026. A parceria ainda está em prospecção. As atividades de campo dependem do acordo com a instituição; os períodos abaixo são previsões de trabalho.
 
-A sequência proposta começa pela escuta, passa pela definição dos requisitos e pela validação da solução e só então chega à implementação destinada ao uso na instituição. Estudos de sensores e ensaios de bancada podem ocorrer antes. A aquisição depende da escolha da placa e do orçamento.
+A sequência proposta começa pela escuta, passa pela definição dos requisitos e pela validação da solução e só então chega à implementação destinada ao uso na instituição. Estudos de sensores e ensaios de bancada podem ocorrer antes. A compra da placa escolhida depende do orçamento do grupo.
 
 Tabela 1 – Marcos acadêmicos da disciplina
 
@@ -92,7 +92,7 @@ Tabela 4 – Metas técnicas e medição prevista
 | Saída da área segura | Alerta em até 2 minutos | Comparar o instante de cruzamento do limite com o recebimento do alerta pelo cuidador |
 | Autonomia | Pelo menos 8 horas por carga | Medir o tempo de funcionamento contínuo, registrando frequência de localização e transmissão |
 | Configuração do alerta | Botão manual e localização disponível no aviso | Acionar o botão e verificar o recebimento; testar GNSS em local aberto e registrar indisponibilidade de sinal |
-| Custo | Teto inicial de R$ 500 na alternativa LilyGO | Somar os gastos efetivos; o teto não comporta a estimativa Waveshare de R$ 597 a R$ 622 |
+| Custo | Estimativa de R$ 597 a R$ 622 por unidade, com a Waveshare | Manter a lista de materiais com preços de referência; não há compra neste semestre |
 
 Fonte: metas do projeto e procedimentos propostos pelos autores (2026).
 
@@ -110,24 +110,29 @@ A avaliação de reação tem meta mínima de 4 em 5. O formulário deve permiti
 
 ## 2.5 Recursos previstos
 
-O grupo considera duas alternativas de aquisição, ainda sem escolha de placa ou compra confirmada. Os valores foram registrados em setembro de 2026.
+O grupo escolheu como plataforma de hardware a placa Waveshare ESP32-S3-SIM7670G-4G, vendida no mercado nacional. Ela junta numa só peça o microcontrolador ESP32-S3, o modem 4G, o GNSS, o Wi-Fi e o Bluetooth, o que reduz a montagem e facilita que outra pessoa reproduza o dispositivo. O ESP32-S3 é o mesmo microcontrolador já configurado no firmware e no simulador, e o case foi desenhado para essa placa. A LilyGO T-A7670G R2, considerada no início por custar menos, dependia de importação, com prazo maior e sem nota fiscal, e obrigaria a refazer o case.
 
-Tabela 5 – Alternativas de orçamento para uma unidade
+Tabela 5 – Custo estimado de uma unidade, para quem for montar o dispositivo
 
-| Alternativa | Estimativa registrada | Fonte prevista |
-|---|---|---|
-| LilyGO T-A7670G R2 importada | R$ 419; teto inicial de R$ 500 | Grupo |
-| Waveshare ESP32-S3-SIM7670G-4G no mercado nacional | R$ 597 a R$ 622 | Grupo |
-| Plano de dados e hospedagem | Valores ainda não definidos | Sem financiamento acordado |
+| Item | Estimativa |
+| --- | --- |
+| Placa Waveshare ESP32-S3-SIM7670G-4G | R$ 459,99 |
+| Frete da placa | R$ 8,90 |
+| Sensor MPU6050 | R$ 28,10 |
+| Bateria 18650, 3500 mAh | R$ 45 a R$ 70 |
+| Botão, buzzer e LED | R$ 15 |
+| Barras de pinos, jumpers e parafusos | R$ 10 |
+| Filamento PETG para o case | R$ 15 |
+| Cordão com engate de segurança e clipe de cinto | R$ 15 |
+| Total | R$ 597 a R$ 622 |
+| Plano de dados e hospedagem | ainda não definidos |
 
-Fonte: Cotacao-e-Compras.md e Cotacao-e-Compras.docx, registros de setembro de 2026. Valores estimados, não preços atuais.
+Fonte: Cotacao-e-Compras.docx, preços consultados em 09/09/2026. São estimativas, não preços atuais nem comprovante de compra.
 
-A visão de menor custo inicial favorece a LilyGO na estimativa: R$ 178 a R$ 203 abaixo da Waveshare. Depende, porém, do prazo e do custo da importação, além da revisão do case existente.
+O grupo não vai comprar os componentes neste semestre. Não há tempo para receber a placa, montar e testar antes da entrega de novembro, então o projeto será desenvolvido e testado só em simulação. A tabela fica como referência de custo para a instituição ou para quem quiser montar o dispositivo depois. O total passa do teto de R$ 500 que o grupo tinha assumido, porque só a placa custa cerca de R$ 460. Com a placa importada, a unidade sairia entre R$ 360 e R$ 400, com prazo de entrega de 20 a 45 dias.
 
-A visão de aquisição nacional favorece o aproveitamento do desenho do case para a Waveshare, com conferência física dos encaixes antes da fabricação. Essa alternativa supera o teto inicial em R$ 97 a R$ 122. Ambas dependem de cotação atual; a decisão continua aberta.
+O roteiro da disciplina prevê desenvolver e testar o sistema em simulação, deixando a montagem física para quando houver recursos. O grupo vai trabalhar só com a simulação, no Wokwi, que tem o ESP32-S3, o MPU6050, o botão, o buzzer e o LED. O simulador não tem o modem 4G nem o GNSS, então essas duas partes vão precisar ser representadas de outra forma, por exemplo enviando o alerta pelo Wi-Fi simulado. O roteiro cita softwares livres, e o Wokwi não é um deles; por isso a escolha será apresentada ao professor antes de seguir.
 
-A composição LilyGO é: placa, R$ 169; MPU6050, R$ 28; bateria, R$ 55; interface e conexões, R$ 25; case e cordão, R$ 30; placa portadora, R$ 12/unidade; frete e encargos, R$ 100. A portadora pressupõe lote de cinco, cujo desembolso precisa entrar na compra. A caixa comercial de R$ 25 é outra possibilidade do levantamento.
-
-Estão previstos ESP-IDF para firmware em C, OpenSCAD para o case e Git para versionamento. O roteiro da disciplina prevê simulação em software livre e admite montagem física conforme os recursos. A aplicação dessa alternativa ao MeuAmparo depende da compatibilidade do simulador com ESP32 e os periféricos e da orientação do professor.
+Estão previstos também o ESP-IDF para o firmware em C, o OpenSCAD para o case e o Git com GitHub para versionamento e acompanhamento das tarefas.
 
 Laboratório e impressora 3D da Estácio dependem de disponibilidade. Participam os dois discentes, o Prof. Omar Sacilotto Donaires como orientador e a equipe da instituição, conforme acordo. Não há financiamento da IES ou da parceira confirmado.

@@ -35,17 +35,23 @@ atividade; são critérios diferentes e não devem ser somados nem confundidos.
 
 ## Divergências abertas
 
-A placa está em duas versões na documentação. O README de `docs/projeto/` e o Word de compras registram
-Waveshare ESP32-S3-SIM7670G-4G comprada no mercado nacional, com estimativa de R$ 597 a R$ 622. O
-canvas, os roteiros e o Markdown de compras ainda dizem LilyGO T-A7670G R2 importada, estimativa de
-R$ 419 e teto de R$ 500. Preserve a distinção e confirme comigo antes de consolidar placa ou
-orçamento. Os valores são estimativas registradas em setembro de 2026, não preço atual nem
+Em 16/09/2026 o grupo escolheu a Waveshare ESP32-S3-SIM7670G-4G como plataforma de referência,
+com estimativa de R$ 597 a R$ 622 por unidade, e decidiu não comprar: não há tempo hábil até a
+entrega. Não existe hardware físico neste semestre; não fale em compra, montagem ou teste físico
+como algo previsto. Os dois canvas, o Roteiro 2 em Word e o Markdown de compras ainda
+citam a LilyGO T-A7670G R2 importada (R$ 419, teto de R$ 500); isso é texto desatualizado, não
+alternativa em aberto. Os valores são estimativas de setembro de 2026, não preço atual nem
 comprovante de compra.
 
-O calendário também diverge. Roteiros e índice preveem diagnóstico em 09/09, seminário de
-planejamento em 16/09, planejamento em 23/09, seminário de desenvolvimento em 28/10 e entrega final
-em 25/11/2026. O canvas discorda em algumas datas. Confira o calendário oficial da disciplina antes
-de orientar prazo.
+O desenvolvimento e os testes são só em simulação, no Wokwi, que é o caminho previsto no roteiro
+da disciplina. O roteiro cita software livre e o Wokwi não é; a
+escolha ainda precisa ser confirmada com o professor. O Wokwi não tem peça de GNSS nem de modem
+celular.
+
+O calendário oficial foi atualizado na Aula 04: seminário de diagnóstico (workshop de canvas) em
+02/09, entrega do diagnóstico em 09/09, seminário de planejamento em 16/09, entrega do planejamento
+em 23/09, seminário de desenvolvimento em 28/10 e entrega final com seminário de avaliação em
+25/11/2026. A Aula 01 e o Canvas trazem as datas antigas (26/08, 02/09 e 21/10).
 
 ## Hardware e case
 

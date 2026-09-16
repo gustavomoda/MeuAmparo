@@ -72,9 +72,11 @@ São critérios de aceitação definidos no planejamento. Nenhum foi medido aind
 
 ## Pendências
 
-- **Placa**: a documentação tem duas versões. Índice e Word de compras dizem Waveshare
-  ESP32-S3-SIM7670G-4G, R$ 597 a R$ 622; canvas e Markdown de compras ainda dizem LilyGO T-A7670G R2,
-  R$ 419. Não consolidado.
+- **Placa**: a Waveshare ESP32-S3-SIM7670G-4G é a plataforma de referência, estimada entre R$ 597 e
+  R$ 622, mas não será comprada neste semestre. O projeto é desenvolvido e testado só em simulação.
+  Os canvas e o Markdown de compras ainda citam a LilyGO T-A7670G R2, opção anterior.
+- **Simulador**: o Wokwi não é software livre, que é o que o roteiro da disciplina cita. Falta
+  confirmar com o professor.
 - **Display**: o render do protótipo mostra tela touch de 1,69", que não consta na arquitetura
   documentada nem na cotação.
 - **Instituição parceira**: em prospecção. Casa do Vovô, Lar Padre Euclides e Lar do Vovô Albano são

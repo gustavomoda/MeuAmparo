@@ -24,10 +24,9 @@ calendário. Consulte antes de redigir qualquer entrega, e não presuma a regra 
 `projeto/` tem um `README.md` que serve de índice e mantém a organização numerada:
 
 ```
-01-entregas/            o que vai para a SAVA
-  docx/                 versão editável de cada entrega
-  md/                   fonte do texto
-  pdf/                  o arquivo que se posta
+01-entregas/            os PDFs entregues na SAVA ficam na raiz da pasta
+  md/                   Markdown dos roteiros: a fonte da verdade
+  docx/                 Word gerado a partir do Markdown (e os Canvas, editados no Word)
   figuras/              imagens usadas nas entregas, como o Gantt do cronograma
 02-parte-interessada/   levantamento de instituições de Ribeirão Preto
 03-hardware/            cotação, case e posicionamento
@@ -36,8 +35,14 @@ calendário. Consulte antes de redigir qualquer entrega, e não presuma a regra 
 04-identidade-visual/   logos/ e icones/, em PNG de 512 a 6000 px e em SVG
 ```
 
-Nas pastas 02 e 03 o `.docx` e o `.md` do mesmo documento ficam lado a lado; em `01-entregas` eles
-estão separados por formato. Nenhum par sincroniza sozinho: editou um, confira o outro antes de
+Nos roteiros, o `.md` é a fonte da verdade e o `.docx` e o `.pdf` são gerados a partir dele. Enquanto
+a geração automática não existe, qualquer mudança no `.md` precisa ser levada ao `.docx`. Os Canvas
+seguem o modelo do professor e continuam editados no Word.
+
+O resumo do III EPEI, se for submetido, é outra saída: texto puro de 2.000 a 5.000 caracteres sem
+espaços, sem tabela, figura, autoria nem referências, nas seções exigidas pelo edital
+(`docs/material-disciplina/Edital_III_EPEI.pdf`). O EPEI não define formatação de docx ou pdf. Nas
+pastas 02 e 03 o `.docx` e o `.md` do mesmo documento ficam lado a lado. Nenhum par sincroniza sozinho: editou um, confira o outro antes de
 dizer que está pronto.
 
 Prefira o SVG da identidade visual quando o destino aceitar.
