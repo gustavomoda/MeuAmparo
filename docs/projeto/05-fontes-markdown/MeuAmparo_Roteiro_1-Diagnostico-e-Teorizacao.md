@@ -121,7 +121,7 @@ As soluções de mercado cobram mensalidade, dependem de aplicativo e servidor h
 
 ### Por que o projeto é aberto
 
-Publicando o esquema elétrico, a lista de materiais com fornecedores, o modelo do case e o código-fonte sob licença MIT, a instituição passa a conseguir montar as unidades seguintes por conta própria, pagando apenas o preço das peças, sem depender do grupo depois que o semestre acabar. Para uma organização filantrópica, essa autonomia vale mais do que receber um protótipo pronto.
+Publicando o esquema elétrico, a lista de materiais com fornecedores, o modelo do case e o código-fonte sob licença GNU GPL v3, a instituição passa a conseguir montar as unidades seguintes por conta própria, pagando apenas o preço das peças, sem depender do grupo depois que o semestre acabar. Para uma organização filantrópica, essa autonomia vale mais do que receber um protótipo pronto.
 
 ### A lacuna foi verificada projeto a projeto
 
@@ -148,7 +148,7 @@ A motivação do grupo vem de uma constatação simples: a tecnologia necessári
 
 1. **Desenvolver** um dispositivo vestível de baixo custo capaz de detectar automaticamente a queda de uma pessoa idosa, alertar sobre o afastamento da área segura e acionar seus cuidadores informando a localização, permitindo também o acionamento manual por botão.
 
-2. **Documentar** o hardware e o firmware como projeto aberto, sob licença MIT, incluindo lista de materiais com fornecedores, roteiro de montagem e instruções de configuração, de modo que a instituição consiga replicar unidades adicionais sem apoio técnico externo.
+2. **Documentar** o hardware e o firmware como projeto aberto, sob licença GNU GPL v3, incluindo lista de materiais com fornecedores, roteiro de montagem e instruções de configuração, de modo que a instituição consiga replicar unidades adicionais sem apoio técnico externo.
 
 3. **Capacitar** a equipe da instituição a montar, configurar, testar e operar o dispositivo, verificando essa capacitação por meio de oficina prática ao final do projeto.
 

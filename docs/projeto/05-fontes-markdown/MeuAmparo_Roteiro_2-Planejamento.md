@@ -147,7 +147,7 @@ Todos os integrantes participam dos quatro seminários e escrevem o próprio rel
 
 | Etapa | Critério | Indicador |
 |---|---|---|
-| Publicação | Tudo o que é necessário para replicar está disponível | Repositório público com esquema, lista de materiais com fornecedores, modelo do case, código-fonte e licença MIT |
+| Publicação | Tudo o que é necessário para replicar está disponível | Repositório público com esquema, lista de materiais com fornecedores, modelo do case, código-fonte e licença GNU GPL v3 |
 | Roteiro de montagem | Qualquer pessoa com o kit consegue montar | Documento com passo a passo e fotos de cada etapa |
 | Verificação | A documentação basta sem apoio verbal | Uma pessoa de fora do grupo monta uma unidade seguindo só o documento |
 

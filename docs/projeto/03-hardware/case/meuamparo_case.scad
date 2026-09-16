@@ -1,6 +1,6 @@
 // =====================================================================
 //  MeuAmparo - case do dispositivo de deteccao de queda
-//  Projeto aberto - licenca MIT
+//  Projeto aberto - licenca GNU GPL v3
 //  Placa alvo: Waveshare ESP32-S3-SIM7670G-4G (110 x 30,44 mm)
 //
 //  COMO USAR

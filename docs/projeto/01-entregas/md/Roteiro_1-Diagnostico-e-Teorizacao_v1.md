@@ -54,13 +54,13 @@ A proposta usa ESP32, sensor MPU6050, localização por GNSS e comunicação 4G.
 
 Construir o protótipo permite estudar o algoritmo e adaptar o modo de alerta. Isso, por si só, não demonstra vantagem sobre um produto pronto. A comparação com botões de emergência, relógios com localização e serviços de teleassistência precisa considerar custo total, suporte e facilidade de operação. As faixas de preço do levantamento inicial não têm identificação suficiente de modelos e fornecedores para sustentar uma comparação conclusiva.
 
-Pretendemos publicar o código e a documentação sob licença MIT. A oficina permitirá observar se uma pessoa de fora do grupo consegue seguir as instruções e em quais etapas precisa de ajuda. A necessidade de apoio técnico será um dos resultados dessa avaliação.
+Pretendemos publicar o código e a documentação sob licença GNU GPL v3. A oficina permitirá observar se uma pessoa de fora do grupo consegue seguir as instruções e em quais etapas precisa de ajuda. A necessidade de apoio técnico será um dos resultados dessa avaliação.
 
 ## 1.4 Objetivos/resultados/efeitos a serem alcançados
 
 1. Desenvolver e avaliar um protótipo vestível de baixo custo para detectar possíveis quedas, receber pedidos manuais de ajuda e avisar cuidadores sobre a saída de uma área segura, informando a localização disponível.
 
-2. Publicar o hardware e o firmware como projeto aberto, sob licença MIT, com lista de materiais e instruções de montagem e configuração, avaliando sua compreensão por uma pessoa de fora do grupo.
+2. Publicar o hardware e o firmware como projeto aberto, sob licença GNU GPL v3, com lista de materiais e instruções de montagem e configuração, avaliando sua compreensão por uma pessoa de fora do grupo.
 
 3. Capacitar a equipe da instituição para montar, configurar e operar o dispositivo em uma oficina prática, registrando as dificuldades e o nível de apoio necessário.
 

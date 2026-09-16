@@ -3,7 +3,7 @@
 MeuAmparo é uma proposta de dispositivo vestível de baixo custo para pessoas idosas: detectar
 quedas, permitir pedido manual de ajuda e avisar cuidadores sobre a localização e a saída de uma
 área segura, principalmente em casos de desorientação. O projeto de extensão prevê parceria com uma
-instituição de Ribeirão Preto, documentação aberta sob licença MIT e uma oficina para que a equipe
+instituição de Ribeirão Preto, documentação aberta sob licença GNU GPL v3 e uma oficina para que a equipe
 consiga montar, configurar e operar o dispositivo.
 
 Disciplina Programação de Microcontroladores (ARA4710), Estácio Ribeirão Preto, semestre 2026.2,
@@ -11,8 +11,8 @@ orientação do Prof. Omar Sacilotto Donaires.
 
 Discentes:
 
-- Luis Gustavo Moda — matrícula 202402520751
-- Isabelly Vitoria — matrícula 202608616779
+- Luis Gustavo Moda
+- Isabelly Vitoria
 
 O grupo está definido. Menção a "discentes a definir" ou "grupo em formação" em qualquer arquivo
 está desatualizada.

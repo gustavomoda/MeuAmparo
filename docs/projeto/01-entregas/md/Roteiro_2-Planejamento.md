@@ -100,7 +100,7 @@ Os alarmes falsos por atividade, usados no protocolo do case, serão registrados
 
 ### Objetivo 2 – Publicar documentação de projeto aberto
 
-O material previsto inclui esquema elétrico, lista de materiais com fornecedores, modelo do case e código-fonte sob licença MIT. A verificação terá duas partes: conferir a presença desses arquivos e observar uma pessoa de fora do grupo seguindo o roteiro de montagem. Serão anotados os passos concluídos, as dúvidas e as intervenções necessárias. A documentação será ajustada a partir dessas dificuldades.
+O material previsto inclui esquema elétrico, lista de materiais com fornecedores, modelo do case e código-fonte sob licença GNU GPL v3. A verificação terá duas partes: conferir a presença desses arquivos e observar uma pessoa de fora do grupo seguindo o roteiro de montagem. Serão anotados os passos concluídos, as dúvidas e as intervenções necessárias. A documentação será ajustada a partir dessas dificuldades.
 
 ### Objetivo 3 – Capacitar a equipe da instituição
 
