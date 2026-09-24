@@ -1,121 +1,154 @@
+SOCIEDADE DE ENSINO SUPERIOR ESTÁCIO DE RIBEIRÃO PRETO
+
+Campus Ribeirão Preto
+
+Bacharelado em Ciência da Computação
+
+Programação de Microcontroladores (ARA4710)
+
+# MEU AMPARO
+
+Dispositivo vestível de detecção de queda e localização para pessoas idosas
+
+Planejamento do projeto
+
+Luis Gustavo Moda – Matrícula 202402520751
+
+Isabelly Vitoria – Matrícula 202608616779
+
+Orientador: Prof. Omar Sacilotto Donaires
+
+2026
+
+Ribeirão Preto / SP
+
+---
+
 # 2. Planejamento e desenvolvimento do projeto
 
 ## 2.1 Plano de trabalho
 
-O planejamento organiza o desenvolvimento do MeuAmparo até novembro de 2026. A parceria ainda está em prospecção. As atividades de campo dependem do acordo com a instituição; os períodos abaixo são previsões de trabalho.
+O plano organiza o MeuAmparo de setembro a novembro de 2026. Ele segue as etapas do roteiro da disciplina: definir o escopo e os requisitos, modelar o sistema, validar a proposta com a parte interessada, desenvolver o firmware em C, testar por simulação e apresentar a solução à instituição.
 
-A sequência proposta começa pela escuta, passa pela definição dos requisitos e pela validação da solução e só então chega à implementação destinada ao uso na instituição. Estudos de sensores e ensaios de bancada podem ocorrer antes. A compra da placa escolhida depende do orçamento do grupo.
+Todo o desenvolvimento e os testes acontecem em simulação. O roteiro prevê simular o sistema embarcado e montar a versão física apenas se houver recursos. O grupo decidiu não comprar a placa neste semestre, porque não haveria tempo para receber os componentes, montar e testar antes da entrega final.
 
-Tabela 1 – Marcos acadêmicos da disciplina
+O acompanhamento é feito num quadro do GitHub Projects, apresentado no seminário de planejamento. Cada tarefa é uma issue com prazo, frente de trabalho, responsável e critério de conclusão, e cada entrega da disciplina é um marco. As Tabelas 2 e 3 e a Figura 1 foram montadas a partir desse quadro.
 
-| Entrega ou seminário | Data |
-|---|---|
-| Diagnóstico e teorização, seções 1.1 a 1.5 | 09/09 |
-| Seminário de planejamento | 16/09 |
-| Planejamento, seções 2.1 a 2.5 | 23/09 |
-| Seminário de desenvolvimento | 28/10 |
-| Detalhamento técnico, encerramento e seminário final | 25/11 |
+Tabela 1 – Entregas e seminários da disciplina
 
-Fonte: calendário atualizado da disciplina (2026).
+| Etapa | Seminário | Entrega |
+| -- | ------------ | --------------- |
+| 1 | Diagnóstico (workshop de canvas), 02/09 | Diagnóstico e teorização, seções 1.1 a 1.5, 09/09 |
+| 2 | Planejamento, 16/09 | Planejamento do projeto, seções 2.1 a 2.5, 23/09 |
+| 3 | Desenvolvimento, 28/10 | Detalhamento técnico e encerramento, 25/11 |
+| 4 | Avaliação, 25/11 | — |
 
-Tabela 2 – Atividades previstas e formas de acompanhamento
+Fonte: calendário da disciplina atualizado na Aula 04 (2026).
 
-| Período previsto | Ação e dependência | Frente de trabalho | Recurso e evidência esperada |
-|---|---|---|---|
-| 09 a 23/09 | Contato e formalização da parceria | Relação com a instituição | Carta de apresentação; registro do aceite |
-| 16 a 30/09 | Escuta da coordenação e cuidadores | Relação com a instituição e documentação | Visita; resumo conferido pelos participantes |
-| 23/09 a 07/10 | Requisitos e comparação de microcontroladores | Hardware | Computador; requisitos e comparação técnica |
-| 30/09 a 14/10 | Arquitetura e fluxo de funcionamento | Hardware e firmware | Ferramentas de diagramação; diagramas |
-| 14 a 21/10 | Validação da proposta, antes da implementação para uso | Relação com a instituição | Reunião; decisões e ajustes registrados |
-| Até 21/10, após decisão de compra | Aquisição dos componentes | Hardware | Recursos do grupo; comprovantes e recebimento |
-| 07 a 21/10 | Estudo do algoritmo e ensaios de bancada | Firmware | ESP-IDF e dados de referência; registros dos ensaios |
-| Após validação, até 11/11 | Implementação e integração de detecção, localização e alertas | Firmware e painel | Hardware e computador; versões do código e testes |
-| 21/10 a 04/11 | Ajuste e fabricação do case, após conferir a placa | Hardware | OpenSCAD e impressão 3D; medidas e encaixes |
-| 28/10 a 18/11 | Montagem e testes individuais e de integração | Hardware e firmware | Protótipo; registros de acertos, falhas e tempos |
-| 11 a 18/11, após testes de integração | Oficina de montagem e configuração | Relação com a instituição e documentação | Kit e manual; tempo e dificuldades observadas |
-| 18 a 25/11 | Avaliação de reação | Relação com a instituição | Formulário; respostas e comentários |
-| 11 a 25/11 | Relato coletivo, relatos individuais e entrega | Documentação e ambos os discentes | Evidências das atividades; texto e PDF para SAVA |
+Tabela 2 – Tarefas, prazos, responsáveis e acompanhamento
 
-Fonte: planejamento dos autores (2026). A atribuição individual das frentes está na seção 2.3.
+| Período | Tarefa | Frente | Responsável | Como acompanhar |
+| ----- | ------------ | ------ | ------ | ------------ |
+| 16/09 a 23/09 | Escrever e entregar o planejamento | Documentação | Gustavo e Isa | PDF postado na SAVA |
+| 16/09 a 30/09 | Contatar as instituições e conseguir um aceite | Parte interessada | Isa | Aceite registrado |
+| 16/09 a 30/09 | Definir o escopo e os requisitos funcionais | Documentação | Isa | Lista de requisitos, cada um com forma de verificação |
+| 16/09 a 30/09 | Desenhar o diagrama de blocos e o fluxograma | Firmware | Isa | Diagramas no repositório |
+| 23/09 a 07/10 | Conversar com a coordenação e os cuidadores | Parte interessada | Isa | Resumo da conversa conferido pela instituição |
+| 07/10 a 14/10 | Validar a proposta com a instituição | Parte interessada | Gustavo e Isa | Reunião registrada, com os ajustes pedidos |
+| 23/09 a 21/10 | Implementar o algoritmo de detecção de queda | Firmware | Gustavo e Isa | Testes automáticos com a taxa de detecção |
+| 30/09 a 28/10 | Montar o circuito no simulador | Firmware | Gustavo e Isa | Simulação lendo o sensor e o botão |
+| 21/10 a 28/10 | Apresentar o seminário de desenvolvimento | Documentação | Gustavo e Isa | Retorno do professor anotado |
+| 14/10 a 11/11 | Completar o firmware | Firmware | Gustavo e Isa | Queda ou botão gerando alerta com posição, na simulação |
+| 14/10 a 11/11 | Construir o backend e o painel de alertas | Backend | Gustavo e Isa | Alerta da simulação aparecendo no painel |
+| 28/10 a 18/11 | Testar por função e com o sistema integrado | Firmware | Gustavo e Isa | Registro dos testes, com acertos e falhas |
+| 11/11 a 18/11 | Apresentar a solução e orientar a equipe da instituição | Parte interessada | Gustavo e Isa | Tempo e dúvidas registrados |
+| 18/11 a 25/11 | Aplicar a avaliação de reação | Parte interessada | Gustavo e Isa | Respostas do formulário resumidas |
+| 11/11 a 25/11 | Escrever e entregar o detalhamento técnico e o encerramento | Documentação | Gustavo e Isa | PDF postado na SAVA |
+| 18/11 a 25/11 | Apresentar o seminário de avaliação | Documentação | Gustavo e Isa | Apresentação feita |
 
-A Figura 1 mostra as mesmas atividades distribuídas no tempo, com as entregas e os seminários da disciplina marcados em vermelho.
+Fonte: quadro do projeto no GitHub, em 23/09/2026.
+
+Já foram concluídos a formação do grupo e a escolha do tema, o canvas apresentado em 02/09, o diagnóstico entregue em 09/09, a definição da arquitetura e o seminário de planejamento de 16/09.
 
 Figura 1 – Cronograma do projeto
 
-![Cronograma do projeto MeuAmparo, de setembro a novembro de 2026](../figuras/gantt_cronograma.svg)
+![Cronograma do projeto MeuAmparo, de agosto a novembro de 2026](../figuras/gantt_cronograma.svg)
 
-Fonte: planejamento dos autores (2026).
+Fonte: quadro do projeto no GitHub, em 23/09/2026.
 
-Os prazos após a validação ficam condicionados ao aceite da instituição e ao recebimento dos componentes. Se essas etapas atrasarem, o escopo e a agenda precisarão ser acordados com o orientador.
+As tarefas com a instituição dependem do aceite de uma das candidatas. Se o contato atrasar, as datas de conversa, validação e apresentação serão combinadas de novo com a instituição e com o orientador.
 
 ## 2.2 Forma de envolvimento do público participante
 
-Na primeira visita, pretendemos ouvir a coordenação e os cuidadores sobre a rotina, as ocorrências que exigem ajuda e a comunicação entre os responsáveis. Essa conversa deve orientar a prioridade das funções. O grupo apresentará a proposta com base no que for registrado e levará de volta os requisitos para conferência, antes da implementação destinada ao uso local.
+A instituição parceira ainda está sendo procurada. As candidatas são a Casa do Vovô, o Lar Padre Euclides e o Lar do Vovô Albano, escolhidas num levantamento de catorze entidades cadastradas no Conselho Municipal do Idoso de Ribeirão Preto. O primeiro contato será por telefone e e-mail, com a carta de apresentação da faculdade, pedindo uma conversa de cerca de 20 minutos com a coordenação. Se nenhuma das três responder, o Conselho será procurado para indicar outra entidade.
 
-Durante o desenvolvimento, a equipe será convidada a discutir os destinatários dos alertas e o procedimento após um aviso. A avaliação do formato de uso considera peso, conforto e acesso ao botão. Cintura, peito e braço são posições propostas para estudo. O cordão, se utilizado, terá engate de segurança.
+No planejamento, a primeira conversa serve para ouvir a coordenação e os cuidadores: como é a rotina, que quedas e saídas já aconteceram, como a equipe fica sabendo e quem deveria receber o aviso. Essas respostas definem a prioridade das funções e entram nos requisitos.
 
-Os testes de detecção serão realizados por adultos saudáveis em ambiente controlado. Pessoas idosas não participarão de quedas simuladas. A equipe da instituição poderá avaliar a interface e a configuração, sem precisar executar os ensaios de queda.
+No desenvolvimento, o grupo leva os requisitos e o desenho do sistema de volta à instituição antes de implementar, para que a equipe confirme ou peça ajustes. Os destinatários dos alertas e o que fazer depois de um aviso são decididos junto com ela.
 
-Na oficina, um participante tentará configurar o dispositivo com o material de apoio e sem intervenção do grupo. Registraremos o tempo, os erros e a ajuda solicitada. Depois, coordenação e cuidadores poderão responder ao formulário de reação. Depoimentos em vídeo serão opcionais e dependerão de autorização.
+Na avaliação, o grupo mostra a solução funcionando na simulação e explica como a instituição poderia montar e usar o dispositivo. Depois, coordenação e cuidadores respondem a um formulário de reação.
 
-Os encontros serão combinados conforme a disponibilidade da instituição. Após cada reunião, o grupo organizará um resumo para conferência dos participantes. Atas, formulários e registros autorizados serão identificados por data e atividade e anexados conforme os encontros ocorrerem.
+Pessoas idosas não participam de nenhum teste de queda. Neste semestre os testes são todos em simulação, com dados de referência.
+
+Cada encontro terá um resumo conferido pela instituição. Fotos, capturas de tela, mensagens e formulários serão guardados com data e só com autorização de quem aparece.
 
 ## 2.3 Grupo de trabalho
 
-O grupo tem dois integrantes: Luis Gustavo Moda, matrícula 202402520751, e Isabelly Vitoria, matrícula 202608616779. A distribuição individual das atividades técnicas e do contato com a instituição ainda não foi registrada; por isso, o cronograma identifica frentes de trabalho, não pessoas.
+O grupo tem dois integrantes. As partes centrais do sistema, o algoritmo, o firmware, a simulação e os testes, são feitas pelos dois, para que ambos aprendam a parte técnica. Cada um também lidera frentes próprias, como mostra a Tabela 3.
 
-Tabela 3 – Integrantes e situação da divisão de atividades
+Tabela 3 – Papéis e responsabilidades
 
-| Discente | Matrícula | Responsabilidade individual |
-|---|---|---|
-| Luis Gustavo Moda | 202402520751 | Relato individual e participação nos seminários; divisão das frentes pendente |
-| Isabelly Vitoria | 202608616779 | Relato individual e participação nos seminários; divisão das frentes pendente |
+| Discente | Matrícula | Lidera | Faz junto |
+| ----- | ----- | ------------ | ------------ |
+| Luis Gustavo Moda | 202402520751 | Backend e painel de alertas; repositório, ferramentas e automação; modelo do case | Algoritmo, firmware, simulação, testes, validação com a instituição e revisão das entregas |
+| Isabelly Vitoria | 202608616779 | Contato com a instituição e conversa com a equipe; requisitos; diagramas; cronograma e registros; avaliação com o público | Algoritmo, firmware, simulação, testes, validação com a instituição e revisão das entregas |
 
-Fonte: registro do grupo (2026).
+Fonte: divisão combinada pelo grupo e registrada no quadro do projeto (2026).
 
-As frentes abrangem contato e formalização, hardware e case, firmware em C, backend e painel, além de documentação. A definição nominal completa esta seção. As revisões em dupla previstas no planejamento apoiam o aprendizado das partes técnicas por ambos.
+Essa divisão é a base dos relatos individuais da seção 3.2.
 
 ## 2.4 Metas, critérios ou indicadores de avaliação do projeto
 
-As metas abaixo são resultados pretendidos, ainda sem medições do protótipo. Os registros dos testes devem identificar a versão do firmware, a posição de uso e as condições do ensaio, para permitir a comparação entre ajustes.
+As metas abaixo seguem os três objetivos da seção 1.4. São resultados pretendidos, ainda não medidos. Como o projeto não terá hardware físico neste semestre, cada meta diz como será verificada em simulação e quais medições dependem de uma montagem futura.
 
-### Objetivo 1 – Desenvolver e avaliar o protótipo
+### Objetivo 1 – Desenvolver e avaliar o dispositivo
 
-O desenvolvimento começa pelos requisitos e pela comparação entre microcontroladores. A escolha considera consumo, custo, memória, dimensões e periféricos, com a comparação prevista de pelo menos quatro famílias. Depois da validação, a implementação será verificada por função e no conjunto completo.
+Etapas: definir os requisitos, desenhar o diagrama de blocos e o fluxograma, implementar o algoritmo de detecção, montar o circuito no simulador, completar o firmware e testar por função e com o sistema integrado.
 
-Tabela 4 – Metas técnicas e medição prevista
+Tabela 4 – Metas técnicas e forma de verificação
 
-| Aspecto | Meta | Como medir |
-|---|---|---|
-| Detecção de queda | Pelo menos 90% das quedas simuladas | Dividir quedas detectadas pelo total de quedas simuladas e multiplicar por 100; registrar também as falhas |
-| Alarmes falsos | Menos de 1 por dia por dispositivo | Contar avisos indevidos no período de uso e registrar as horas observadas; ensaios curtos não comprovam a meta diária |
-| Saída da área segura | Alerta em até 2 minutos | Comparar o instante de cruzamento do limite com o recebimento do alerta pelo cuidador |
-| Autonomia | Pelo menos 8 horas por carga | Medir o tempo de funcionamento contínuo, registrando frequência de localização e transmissão |
-| Configuração do alerta | Botão manual e localização disponível no aviso | Acionar o botão e verificar o recebimento; testar GNSS em local aberto e registrar indisponibilidade de sinal |
-| Custo | Estimativa de R$ 597 a R$ 622 por unidade, com a Waveshare | Manter a lista de materiais com preços de referência; não há compra neste semestre |
+| Aspecto | Meta | Como verificar neste semestre |
+| ----- | ------ | ----------------- |
+| Detecção de queda | Pelo menos 90% das quedas | Rodar o algoritmo contra registros de queda de referência e contar acertos e falhas |
+| Alarmes falsos | Menos de 1 por dia | Contar detecções indevidas em registros de atividades comuns, como caminhar, sentar e deitar. A taxa diária só pode ser medida em uso real |
+| Pedido de ajuda | Botão gera alerta com posição | Acionar o botão na simulação e conferir o alerta recebido |
+| Saída da área segura | Alerta em até 2 minutos | Simular posições saindo da área e medir o tempo até o alerta |
+| Autonomia | Pelo menos 8 horas por carga | Estimar pelo consumo dos componentes e pelo tempo que o firmware passa ativo. A medição real depende da montagem |
 
 Fonte: metas do projeto e procedimentos propostos pelos autores (2026).
 
-Os alarmes falsos por atividade, usados no protocolo do case, serão registrados separadamente da taxa diária. A localização em ambiente fechado e a identificação por rede conhecida são possibilidades de estudo, sem desempenho demonstrado. A função de localização não deve apresentar uma posição antiga como se fosse atual.
+O Wokwi não simula o modem 4G nem o GNSS. No teste, o alerta sai pelo Wi-Fi simulado e a posição vem de dados preparados. Por isso a simulação não valida a cobertura do 4G nem a precisão do GPS, e isso ficará registrado como limite dos resultados.
 
-### Objetivo 2 – Publicar documentação de projeto aberto
+### Objetivo 2 – Publicar o projeto aberto
 
-O material previsto inclui esquema elétrico, lista de materiais com fornecedores, modelo do case e código-fonte sob licença GNU GPL v3. A verificação terá duas partes: conferir a presença desses arquivos e observar uma pessoa de fora do grupo seguindo o roteiro de montagem. Serão anotados os passos concluídos, as dúvidas e as intervenções necessárias. A documentação será ajustada a partir dessas dificuldades.
+Etapas: publicar no repositório, sob licença GNU GPL v3, o código comentado, o diagrama, a lista de materiais com fornecedores, o modelo do case e as instruções para rodar a simulação e montar o dispositivo.
 
-### Objetivo 3 – Capacitar a equipe da instituição
+Critério: uma pessoa de fora do grupo consegue rodar a simulação seguindo só as instruções. O grupo anota o tempo, as dúvidas e as ajudas pedidas e ajusta a documentação a partir disso.
 
-A oficina abordará montagem, configuração e operação. A meta de configuração é que um membro da equipe conclua o procedimento em menos de 15 minutos, sem intervenção do grupo. O registro inclui tempo e ajuda solicitada, mesmo quando a meta não for atingida.
+### Objetivo 3 – Orientar a equipe da instituição
 
-A avaliação de reação tem meta mínima de 4 em 5. O formulário deve permitir comentário sobre as dificuldades, e o relatório apresentará as respostas e a quantidade de participantes. Como critério proposto de consolidação, será usada a média das notas de avaliação geral. O vídeo, quando autorizado, complementa o formulário e não é obrigatório.
+Sem dispositivo físico, a oficina de montagem prevista no diagnóstico vira um encontro em que o grupo demonstra a simulação, explica como montar e configurar o dispositivo e entrega o material de apoio.
+
+Critérios: um membro da equipe consegue configurar quem recebe os alertas em menos de 15 minutos, sem ajuda do grupo, e a avaliação de reação tem média de pelo menos 4 em 5. O relatório final apresenta o tempo, as ajudas pedidas, as respostas do formulário e o número de participantes, mesmo que as metas não sejam atingidas.
 
 ## 2.5 Recursos previstos
 
-O grupo escolheu como plataforma de hardware a placa Waveshare ESP32-S3-SIM7670G-4G, vendida no mercado nacional. Ela junta numa só peça o microcontrolador ESP32-S3, o modem 4G, o GNSS, o Wi-Fi e o Bluetooth, o que reduz a montagem e facilita que outra pessoa reproduza o dispositivo. O ESP32-S3 é o mesmo microcontrolador já configurado no firmware e no simulador, e o case foi desenhado para essa placa. A LilyGO T-A7670G R2, considerada no início por custar menos, dependia de importação, com prazo maior e sem nota fiscal, e obrigaria a refazer o case.
+O grupo escolheu como plataforma de hardware de referência a placa Waveshare ESP32-S3-SIM7670G-4G, vendida no mercado nacional. Ela junta numa só peça o microcontrolador ESP32-S3, o modem 4G, o GNSS, o Wi-Fi e o Bluetooth, o que reduz a montagem e facilita que outra pessoa reproduza o dispositivo. O ESP32-S3 é o mesmo microcontrolador usado no firmware e no simulador, e o modelo do case foi desenhado para essa placa.
 
 Tabela 5 – Custo estimado de uma unidade, para quem for montar o dispositivo
 
 | Item | Estimativa |
-| --- | --- |
+| ---------------- | ------ |
 | Placa Waveshare ESP32-S3-SIM7670G-4G | R$ 459,99 |
 | Frete da placa | R$ 8,90 |
 | Sensor MPU6050 | R$ 28,10 |
@@ -129,10 +162,10 @@ Tabela 5 – Custo estimado de uma unidade, para quem for montar o dispositivo
 
 Fonte: Cotacao-e-Compras.docx, preços consultados em 09/09/2026. São estimativas, não preços atuais nem comprovante de compra.
 
-O grupo não vai comprar os componentes neste semestre. Não há tempo para receber a placa, montar e testar antes da entrega de novembro, então o projeto será desenvolvido e testado só em simulação. A tabela fica como referência de custo para a instituição ou para quem quiser montar o dispositivo depois. O total passa do teto de R$ 500 que o grupo tinha assumido, porque só a placa custa cerca de R$ 460. Com a placa importada, a unidade sairia entre R$ 360 e R$ 400, com prazo de entrega de 20 a 45 dias.
+Nenhum componente será comprado neste semestre, então o projeto não tem custo financeiro para o grupo, para a faculdade nem para a instituição. A Tabela 5 fica como referência para quem quiser montar o dispositivo depois.
 
-O roteiro da disciplina prevê desenvolver e testar o sistema em simulação, deixando a montagem física para quando houver recursos. O grupo vai trabalhar só com a simulação, no Wokwi, que tem o ESP32-S3, o MPU6050, o botão, o buzzer e o LED. O simulador não tem o modem 4G nem o GNSS, então essas duas partes vão precisar ser representadas de outra forma, por exemplo enviando o alerta pelo Wi-Fi simulado. O roteiro cita softwares livres, e o Wokwi não é um deles; por isso a escolha será apresentada ao professor antes de seguir.
+Recursos materiais: os computadores dos integrantes, o simulador Wokwi, o ESP-IDF para o firmware em C, o OpenSCAD para o modelo do case e o GitHub para versionar o código e acompanhar as tarefas. O Wokwi tem o ESP32-S3, o MPU6050, o botão, o buzzer e o LED. O roteiro da disciplina cita simuladores livres, e o Wokwi não é um deles; o grupo o escolheu porque é o simulador disponível que reproduz o ESP32-S3, e a escolha foi levada ao professor.
 
-Estão previstos também o ESP-IDF para o firmware em C, o OpenSCAD para o case e o Git com GitHub para versionamento e acompanhamento das tarefas.
+Recursos institucionais: a orientação do Prof. Omar Sacilotto Donaires e o tempo e o espaço da instituição parceira para as conversas e a apresentação, conforme o que for combinado.
 
-Laboratório e impressora 3D da Estácio dependem de disponibilidade. Participam os dois discentes, o Prof. Omar Sacilotto Donaires como orientador e a equipe da instituição, conforme acordo. Não há financiamento da IES ou da parceira confirmado.
+Recursos humanos: as horas de trabalho dos dois integrantes e a participação da coordenação e dos cuidadores da instituição.
