@@ -55,15 +55,16 @@ conteúdo.
 ```
 core/        algoritmos em C puro. Não sabe que ESP32 existe
 firmware/    ESP-IDF. Só o que roda na placa física
-simulator/   Wokwi, custom chips, traces e ferramentas. Nada daqui vai para a placa
+simulator/   Wokwi: circuito, wokwi.toml e cenários de teste. Nada daqui vai para a placa
 test/        testes de host do core, rodam no Mac sem ESP-IDF instalado
 build/       saída do make, fora do git
-Makefile     alvos help, test e clean
+Makefile     alvos de build, teste e simulação; `make help` lista todos
 ```
 
-Hoje só `core/` e `test/` têm conteúdo: um `imu.c` de oito linhas e um teste que passa.
-`firmware/main`, `firmware/components` e as quatro pastas de `simulator/` estão vazias. Os README
-de cada pasta descrevem o destino, não o estado atual — não leia como se já existisse.
+Estado em 28/10/2026: o core tem detector de queda, máquina de estados, geofence e formato do
+alerta, com testes de host. O firmware lê MPU6050, botão, LED, buzzer e visor OLED e manda o
+alerta pelo serial. O simulador tem o circuito e os cenários que `make sim` roda. GNSS e modem
+4G não existem na simulação: a posição é fixa.
 
 O detalhe de cada camada, e o motivo da separação, está em `src/meuamparo/README.md` e nos README de
 `core/`, `firmware/` e `simulator/`. Esses arquivos são a fonte; não duplique o conteúdo deles aqui.

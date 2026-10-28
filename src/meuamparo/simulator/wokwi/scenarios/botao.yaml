@@ -5,8 +5,9 @@ author: 'MeuAmparo'
 steps:
   - wait-serial: 'monitorando'
   - delay: 1000ms
+  # o wait-serial só enxerga o que sai depois que ele começa, por isso vem logo depois
+  # do aperto e antes de soltar o botão
   - set-control: { part-id: btn1, name: pressed, value: 1 }
-  - delay: 100ms
-  - set-control: { part-id: btn1, name: pressed, value: 0 }
   - wait-serial: 'MA_ALERT {"device":"ma-01","kind":"panic"'
+  - set-control: { part-id: btn1, name: pressed, value: 0 }
   - expect-pin: { part-id: esp, name: 2, value: 1 }

@@ -2,6 +2,7 @@
 #define MEUAMPARO_BOARD_H
 
 #include "driver/gpio.h"
+#include "hal/adc_types.h"
 
 /*
  * Pinagem do protótipo, igual à do simulator/wokwi/diagram.json. Mudou aqui, muda lá.
@@ -15,5 +16,10 @@
 #define MA_PIN_BUZZER   GPIO_NUM_5
 #define MA_PIN_I2C_SDA  GPIO_NUM_8
 #define MA_PIN_I2C_SCL  GPIO_NUM_9
+
+/* GPIO1 é o canal 0 do ADC1 no ESP32-S3. No Wokwi, ligado a um potenciômetro que faz
+ * o papel da tensão da bateria. */
+#define MA_PIN_BATTERY  GPIO_NUM_1
+#define MA_ADC_BATTERY  ADC_CHANNEL_0
 
 #endif /* MEUAMPARO_BOARD_H */

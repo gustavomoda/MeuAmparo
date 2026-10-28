@@ -3,45 +3,222 @@
   "author": "MeuAmparo",
   "editor": "wokwi",
   "parts": [
-    { "type": "board-esp32-s3-devkitc-1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
-    { "type": "wokwi-mpu6050", "id": "imu1", "top": -120, "left": -40, "attrs": {} },
+    {
+      "type": "board-esp32-s3-devkitc-1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-ssd1306",
+      "id": "oled1",
+      "top": -130,
+      "left": 130,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mpu6050",
+      "id": "imu1",
+      "top": -120,
+      "left": -40,
+      "attrs": {}
+    },
     {
       "type": "wokwi-pushbutton",
       "id": "btn1",
       "top": 220,
       "left": 160,
-      "attrs": { "color": "red", "label": "ajuda", "bounce": "0" }
+      "attrs": {
+        "color": "red",
+        "label": "ajuda",
+        "bounce": "0"
+      }
     },
-    { "type": "wokwi-buzzer", "id": "bz1", "top": 60, "left": 230, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 60,
+      "left": 230,
+      "attrs": {}
+    },
     {
       "type": "wokwi-led",
       "id": "led1",
       "top": -60,
-      "left": 150,
-      "attrs": { "color": "red", "label": "status" }
+      "left": 300,
+      "attrs": {
+        "color": "red",
+        "label": "status"
+      }
     },
     {
       "type": "wokwi-resistor",
       "id": "r1",
       "top": 20,
-      "left": 150,
-      "attrs": { "value": "330" }
+      "left": 300,
+      "attrs": {
+        "value": "330"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "ajuda",
+      "top": -130,
+      "left": 470,
+      "attrs": {
+        "text": "COMO TESTAR\nAjuda: clique no botao vermelho.\nBateria: gire o potenciometro.\nSensor: mexa nos sliders do MPU6050 e veja\na fase e o |a| ao vivo no Serial Monitor.\nQueda: make sim-queda no terminal\n(o slider vai so ate 2 g; o impacto pede 2,5 g)."
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": 130,
+      "left": -170,
+      "attrs": {
+        "value": "3500"
+      }
     }
   ],
   "connections": [
-    [ "esp:TX", "$serialMonitor:RX", "", [] ],
-    [ "esp:RX", "$serialMonitor:TX", "", [] ],
-    [ "imu1:VCC", "esp:3V3.1", "red", [] ],
-    [ "imu1:GND", "esp:GND.1", "black", [] ],
-    [ "imu1:SDA", "esp:8", "blue", [] ],
-    [ "imu1:SCL", "esp:9", "gold", [] ],
-    [ "btn1:1.l", "esp:4", "orange", [] ],
-    [ "btn1:2.l", "esp:GND.2", "black", [] ],
-    [ "bz1:2", "esp:5", "purple", [] ],
-    [ "bz1:1", "esp:GND.2", "black", [] ],
-    [ "esp:2", "r1:1", "green", [ "v0" ] ],
-    [ "r1:2", "led1:A", "green", [ "v0" ] ],
-    [ "led1:C", "esp:GND.1", "black", [ "v0" ] ]
+    [
+      "esp:TX",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "imu1:VCC",
+      "esp:3V3.1",
+      "red",
+      [
+        "v-20",
+        "h30"
+      ]
+    ],
+    [
+      "imu1:GND",
+      "esp:GND.1",
+      "black",
+      [
+        "v-30",
+        "h56"
+      ]
+    ],
+    [
+      "imu1:SDA",
+      "esp:8",
+      "blue",
+      [
+        "v-50",
+        "h108"
+      ]
+    ],
+    [
+      "imu1:SCL",
+      "esp:9",
+      "gold",
+      [
+        "v-40",
+        "h82"
+      ]
+    ],
+    [
+      "btn1:1.l",
+      "esp:4",
+      "orange",
+      []
+    ],
+    [
+      "btn1:2.l",
+      "esp:GND.2",
+      "black",
+      []
+    ],
+    [
+      "bz1:2",
+      "esp:5",
+      "purple",
+      []
+    ],
+    [
+      "bz1:1",
+      "esp:GND.2",
+      "black",
+      []
+    ],
+    [
+      "esp:2",
+      "r1:1",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "r1:2",
+      "led1:A",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "led1:C",
+      "esp:GND.1",
+      "black",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "oled1:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "oled1:3V3",
+      "esp:3V3.1",
+      "red",
+      []
+    ],
+    [
+      "oled1:CLK",
+      "esp:9",
+      "gold",
+      []
+    ],
+    [
+      "oled1:DATA",
+      "esp:8",
+      "blue",
+      []
+    ],
+    [
+      "pot1:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "pot1:VCC",
+      "esp:3V3.2",
+      "red",
+      []
+    ],
+    [
+      "pot1:SIG",
+      "esp:1",
+      "green",
+      []
+    ]
   ],
   "dependencies": {}
 }

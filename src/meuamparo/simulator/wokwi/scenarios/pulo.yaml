@@ -12,10 +12,10 @@ steps:
   - delay: 60ms
   - set-control: { part-id: imu1, name: accelZ, value: 1 }
   - delay: 800ms
-  # voltou a andar
+  # voltou a andar: o primeiro passo já tira da imobilidade
   - set-control: { part-id: imu1, name: accelZ, value: 1.6 }
-  - delay: 200ms
-  - set-control: { part-id: imu1, name: accelZ, value: 0.7 }
-  - delay: 200ms
-  - set-control: { part-id: imu1, name: accelZ, value: 1 }
   - wait-serial: 'stillness -> idle'
+  - set-control: { part-id: imu1, name: accelZ, value: 1 }
+  # mais 12 s parado em pé: passa da janela de cancelamento e não pode sair alerta
+  - delay: 12000ms
+  - expect-pin: { part-id: esp, name: 2, value: 0 }
