@@ -1,0 +1,21 @@
+# Pulo: tem queda livre e impacto, mas a pessoa volta a se mexer. Não pode gerar alerta.
+# O cenário passa se a fase de imobilidade for interrompida e voltar a idle.
+name: 'Pulo não gera alerta'
+version: 1
+author: 'MeuAmparo'
+steps:
+  - wait-serial: 'monitorando'
+  - delay: 1000ms
+  - set-control: { part-id: imu1, name: accelZ, value: 0.1 }
+  - delay: 300ms
+  - set-control: { part-id: imu1, name: accelZ, value: 3.5 }
+  - delay: 60ms
+  - set-control: { part-id: imu1, name: accelZ, value: 1 }
+  - delay: 800ms
+  # voltou a andar
+  - set-control: { part-id: imu1, name: accelZ, value: 1.6 }
+  - delay: 200ms
+  - set-control: { part-id: imu1, name: accelZ, value: 0.7 }
+  - delay: 200ms
+  - set-control: { part-id: imu1, name: accelZ, value: 1 }
+  - wait-serial: 'stillness -> idle'

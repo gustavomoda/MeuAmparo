@@ -1,0 +1,12 @@
+# Pedido manual de ajuda: um aperto e o alerta sai na hora, sem janela de cancelamento.
+name: 'Botão de pânico'
+version: 1
+author: 'MeuAmparo'
+steps:
+  - wait-serial: 'monitorando'
+  - delay: 1000ms
+  - set-control: { part-id: btn1, name: pressed, value: 1 }
+  - delay: 100ms
+  - set-control: { part-id: btn1, name: pressed, value: 0 }
+  - wait-serial: 'MA_ALERT {"device":"ma-01","kind":"panic"'
+  - expect-pin: { part-id: esp, name: 2, value: 1 }

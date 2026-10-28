@@ -1,0 +1,19 @@
+# Queda detectada, mas a pessoa aperta o botão dentro da janela: o alerta não sai.
+name: 'Queda cancelada pela pessoa'
+version: 1
+author: 'MeuAmparo'
+steps:
+  - wait-serial: 'monitorando'
+  - delay: 1000ms
+  - set-control: { part-id: imu1, name: accelZ, value: 0.1 }
+  - delay: 300ms
+  - set-control: { part-id: imu1, name: accelZ, value: 4 }
+  - delay: 60ms
+  - set-control: { part-id: imu1, name: accelZ, value: 0 }
+  - set-control: { part-id: imu1, name: accelX, value: 1 }
+  - wait-serial: 'queda confirmada'
+  - delay: 2000ms
+  - set-control: { part-id: btn1, name: pressed, value: 1 }
+  - delay: 100ms
+  - set-control: { part-id: btn1, name: pressed, value: 0 }
+  - wait-serial: 'cancelado pela pessoa'

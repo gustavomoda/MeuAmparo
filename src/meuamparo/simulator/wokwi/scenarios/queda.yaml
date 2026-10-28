@@ -1,0 +1,22 @@
+# Queda com a pessoa caída sem levantar. Reproduz as três fases que o detector procura
+# mexendo nos controles do MPU6050 pela automação do Wokwi, porque arrastar slider à mão
+# não consegue fazer um vale de 300 ms seguido de um pico de 60 ms.
+name: 'Queda detectada e alerta enviado'
+version: 1
+author: 'MeuAmparo'
+steps:
+  - wait-serial: 'monitorando'
+  - delay: 1000ms
+  # queda livre: o sensor quase não sente aceleração
+  - set-control: { part-id: imu1, name: accelZ, value: 0.1 }
+  - delay: 300ms
+  # impacto contra o chão
+  - set-control: { part-id: imu1, name: accelZ, value: 4 }
+  - delay: 60ms
+  # caída de lado, parada: a gravidade agora aparece no eixo X
+  - set-control: { part-id: imu1, name: accelZ, value: 0 }
+  - set-control: { part-id: imu1, name: accelX, value: 1 }
+  - wait-serial: 'queda confirmada'
+  # ninguém cancela: depois da janela o alerta sai com a posição
+  - wait-serial: 'MA_ALERT {"device":"ma-01","kind":"fall"'
+  - expect-pin: { part-id: esp, name: 2, value: 1 }

@@ -79,9 +79,12 @@ firmware: ## Compila o firmware ESP-IDF (precisa do export.sh do ESP-IDF carrega
 		exit 1; }
 	@cd $(FIRMWARE_DIR) && idf.py build
 
-# Roda o binário recém-compilado no Wokwi headless e falha se o LED não piscar:
-# o --expect-text procura no serial a linha que o app_main imprime a cada troca.
-sim: firmware ## Roda a demo no Wokwi headless sobre o binário compilado
+# Cada cenário em simulator/wokwi/scenarios/ é um teste de integração: mexe no MPU6050
+# e no botão pela automação do Wokwi e espera pela linha certa no serial. O primeiro
+# cenário que falhar para tudo, com o log dele na tela.
+SCENARIOS = $(wildcard $(WOKWI_DIR)/scenarios/*.yaml)
+
+sim: firmware ## Roda todos os cenários do Wokwi headless (queda, botão, pulo...)
 	@command -v wokwi-cli >/dev/null 2>&1 || { \
 		echo "wokwi-cli não encontrado. Instale com:"; \
 		echo "  make setup"; \
@@ -90,7 +93,11 @@ sim: firmware ## Roda a demo no Wokwi headless sobre o binário compilado
 		echo "WOKWI_CLI_TOKEN não definido. Gere o token em https://wokwi.com/dashboard/ci"; \
 		echo "e exporte na sua shell antes de rodar."; \
 		exit 1; }
-	@wokwi-cli --timeout 10000 --expect-text "led=1" $(WOKWI_DIR)
+	@for s in $(SCENARIOS); do \
+		echo "== $$s"; \
+		wokwi-cli --quiet --timeout 40000 --scenario $$s $(WOKWI_DIR) || exit 1; \
+	done
+	@echo "ok: todos os cenários passaram"
 
 clean: ## Apaga os binários gerados em build/ e no firmware
 	rm -rf $(BUILD) $(FIRMWARE_DIR)/build
